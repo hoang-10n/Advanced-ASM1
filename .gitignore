@@ -180,4 +180,8 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
-/sft_model_epoch_1
+/out
+/wandb
+/tests
+/runs
+*.pt
