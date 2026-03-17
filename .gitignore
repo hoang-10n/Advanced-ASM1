@@ -184,4 +184,5 @@ cython_debug/
 /wandb
 /tests
 /runs
+/out_manual
 *.pt
