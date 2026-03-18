@@ -183,5 +183,5 @@ cython_debug/
 /out
 /wandb
 /tests
-/runs
+/*/runs
 *.pt
