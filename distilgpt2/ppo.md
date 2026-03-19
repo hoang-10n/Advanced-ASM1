@@ -1,4 +1,4 @@
-# RLHF Pipeline: DistilGPT-2 Optimization with TRL
+# RLHF Pipeline: DistilGPT-2 with DPO
 
 This repository implements a **full Reinforcement Learning from Human Feedback (RLHF) pipeline** using the Hugging Face `trl` (Transformer Reinforcement Learning) library. The project transitions a base model through Supervised Fine-Tuning (SFT), Reward Modeling (RM), and Proximal Policy Optimization (PPO) to align model outputs with human preferences.
 
