@@ -15,16 +15,16 @@ The training was conducted in a **Linux (Miniconda)** environment with the follo
 
 ## Model Architectures
 
-### 1. Policy & Reference Models (`gpt2`)
+### 1. Policy & Reference Models (`SmolLM360m`)
 
-* **Source:** [Hugging Face `gpt2`](https://huggingface.co/openai-community/gpt2)
+* **Source:** [Hugging Face `SmolLM360m`](https://huggingface.co/HuggingFaceTB/SmolLM-360M)
 * **Parameters:** ~124 Million
 * **Architecture:** 12-layer, 768-hidden, 12-heads.
 * **Role:** The **Policy Model** is trained via PPO to generate text. The **Reference Model** stays frozen to provide a KL-divergence anchor.
 
-### 2. Reward Model (`gpt2-sequence-classification`)
+### 2. Reward Model (`SmolLM360m-sequence-classification`)
 
-* **Source:** Initialized from `gpt2` weights with a custom `SequenceClassification` head.
+* **Source:** Initialized from `SmolLM360m` weights with a custom `SequenceClassification` head.
 * **Parameters:** ~124 Million + 1 Linear Layer ($768 \times 1$).
 * **Role:** Acts as a regression model that outputs a scalar value representing the "quality" or "human-likeness" of a generated response.
 
@@ -82,7 +82,7 @@ The Policy Model is optimized to maximize the Reward Model's output.
 
 ## Monitoring & Output
 
-Results are stored in `runs/ppo_gpt2/`:
+Results are stored in `runs/ppo_SmolLM360m/`:
 
 * **Checkpoints:** Saved for SFT, Reward Model (best/final), and PPO iterations.
 * **Logs:** CSV/TensorBoard files tracking KL divergence, Reward Mean, and Entropy.
@@ -91,7 +91,7 @@ Results are stored in `runs/ppo_gpt2/`:
 ### Directory Structure
 
 ```text
-runs/ppo_gpt2/
+runs/ppo_SmolLM360m/
  ├── checkpoints/    # Model weights
  ├── logs/           # reward_training_log.csv, ppo_training_log.csv
  └── plots/          # reward_loss_curve.png, ppo_loss.png

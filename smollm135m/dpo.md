@@ -21,8 +21,8 @@ The training was conducted in a **Linux (Miniconda)** environment with the follo
 
 ### . Policy & Reference Models (`gpt2`)
 
-  * **Source:** [Hugging Face `gpt2`](https://huggingface.co/openai-community/gpt2)
-  * **Parameters:** \~124 Million
+  * **Source:** [Hugging Face `SmolLM135m`](https://www.google.com/search?q=%5Bhttps://huggingface.co/gpt2%5D\(https://huggingface.co/gpt2\))
+  * **Parameters:** \~135 Million
   * **Architecture:** 12-layer, 768-hidden, 12-heads.
   * **Role:** The **Policy Model** is optimized directly via the DPO objective. The **Reference Model** (an implicit copy created by `DPOTrainer`) provides the baseline log-probabilities to ensure the model doesn't deviate too far from its original linguistic capabilities.
 

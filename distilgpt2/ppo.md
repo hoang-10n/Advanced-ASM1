@@ -17,7 +17,7 @@ The training was conducted in a **Linux (Miniconda)** environment with the follo
 
 ### 1\. Policy & Reference Models (`distilgpt2`)
 
-  * **Source:** [Hugging Face `distilgpt2`](https://www.google.com/search?q=%5Bhttps://huggingface.co/distilgpt2%5D\(https://huggingface.co/distilgpt2\))
+  * **Source:** [Hugging Face `distilgpt2`](https://huggingface.co/distilbert/distilgpt2)
   * **Parameters:** \~82 Million
   * **Architecture:** 6-layer, 768-hidden, 12-heads. A distilled version of GPT-2 designed to be 33% smaller and twice as fast while retaining 95% of GPT-2's performances.
   * **Role:** The **Policy Model** is trained via PPO to generate text. The **Reference Model** stays frozen to provide a KL-divergence anchor.

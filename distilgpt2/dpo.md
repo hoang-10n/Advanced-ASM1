@@ -23,7 +23,7 @@ The training was conducted in a **Linux (Miniconda)** environment with the follo
 
 ### . Policy & Reference Models (`distilgpt2`)
 
-* **Source:** [Hugging Face `distilgpt2`](https://huggingface.co/distilgpt2)
+* **Source:** [Hugging Face `distilgpt2`](https://huggingface.co/distilbert/distilgpt2)
 * **Parameters:** ~82 Million
 * **Architecture:** 6-layer, 768-hidden, 12-heads.
 * **Role:** The **Policy Model** is optimized directly via the DPO objective. The **Reference Model** (an implicit copy created by `DPOTrainer`) provides the baseline log-probabilities to ensure the model doesn't deviate too far from its original linguistic capabilities.

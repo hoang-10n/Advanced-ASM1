@@ -14,15 +14,15 @@ The training was conducted in a **Linux (Miniconda)** environment with the follo
 | **VRAM Usage** | \~10.5GB (Utilizing `fp16` and Gradient Checkpointing) |
 | **Compute Device** | `cuda:0` (Configured via `CUDA_VISIBLE_DEVICES`) |
 
-> **Note:** The implementation includes a `max_steps` constraint and gradient checkpointing specifically to allow `gpt2` training to fit within the 12GB VRAM limit of a 3060.
+> **Note:** The implementation includes a `max_steps` constraint and gradient checkpointing specifically to allow `SmolLM135m` training to fit within the 12GB VRAM limit of a 3060.
 
 
 ## Model Architectures
 
-### . Policy & Reference Models (`gpt2`)
+### . Policy & Reference Models (`SmolLM135m`)
 
-  * **Source:** [Hugging Face `gpt2`](https://huggingface.co/openai-community/gpt2)
-  * **Parameters:** \~124 Million
+  * **Source:** [Hugging Face `SmolLM360m`](https://huggingface.co/HuggingFaceTB/SmolLM-360M)
+  * **Parameters:** \~360 Million
   * **Architecture:** 12-layer, 768-hidden, 12-heads.
   * **Role:** The **Policy Model** is optimized directly via the DPO objective. The **Reference Model** (an implicit copy created by `DPOTrainer`) provides the baseline log-probabilities to ensure the model doesn't deviate too far from its original linguistic capabilities.
 

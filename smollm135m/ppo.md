@@ -17,7 +17,7 @@ The training was conducted in a **Linux (Miniconda)** environment with the follo
 
 ### 1. Policy & Reference Models (`gpt2`)
 
-* **Source:** [Hugging Face `gpt2`](https://huggingface.co/openai-community/gpt2)
+* **Source:** [Hugging Face `gpt2`](https://huggingface.co/gpt2)
 * **Parameters:** ~124 Million
 * **Architecture:** 12-layer, 768-hidden, 12-heads.
 * **Role:** The **Policy Model** is trained via PPO to generate text. The **Reference Model** stays frozen to provide a KL-divergence anchor.
